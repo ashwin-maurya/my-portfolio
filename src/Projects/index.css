@@ -1,0 +1,59 @@
+.screenRap div {
+  width: 500px;
+  height: 400px;
+  float: left;
+  cursor: pointer;
+  margin: 8px;
+  box-shadow: rgba(0, 0, 0, 0.23) 0px 0px 15px;
+  left: 0;
+}
+
+.screenRap:hover div {
+  animation: none !important;
+}
+
+.screenRap div {
+  background: url(https://images.unsplash.com/photo-1445966275305-9806327ea2b5?ixlib=rb-0.3.5&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&amp;s=14a02fab1200216368d682ecaa91e540)
+    no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: white;
+}
+
+.browser-tab-bar {
+  height: 20px;
+  line-height: 20px;
+  background-color: #eeeeee;
+  border-top-left-radius: 6px;
+  z-index: 100000;
+  border-top-right-radius: 6px;
+  display: block;
+}
+.window-control {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 3px;
+  box-sizing: border-box;
+}
+.window-controls {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  padding-top: 5px;
+  margin: 0px 0px 0px 10px;
+}
+
+.window-control-red {
+  background-color: #ee5c55;
+  border: 1px solid #e93027;
+}
+.window-control-orange {
+  background-color: #f8bc32;
+  border: 1px solid #efa908;
+}
+.window-control-green {
+  background-color: #62cb43;
+  border: 1px solid #4cac2f;
+}

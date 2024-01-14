@@ -38,9 +38,9 @@ export default function SideNav() {
                 key={item.label}
                 className={`relative px-2  transition-all duration-150 py-1 inline rotate-90 font-medium ${
                   activeLink === item.href.substr(1)
-                    ? "text-gray-900 text-xl "
-                    : "text-gray-300 text-lg"
-                } hover:text-gray-500 transition-colors font-mono duration-200 cursor-pointer`}
+                    ? "text-gray-900 text-xl"
+                    : "text-gray-300 text-lg "
+                } hover:text-gray-500 transition-colors font-PlayfairDisplay duration-200 cursor-pointer`}
               >
                 <a href={item.href}>{item.label}</a>
               </li>

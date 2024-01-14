@@ -10,3 +10,50 @@
 ::-webkit-scrollbar {
   display: none;
 }
+
+@font-face {
+  font-family: "PlayfairDisplay-VariableFont_wght";
+  src: local("PlayfairDisplay-VariableFont_wght"),
+    url(./fonts/PlayfairDisplay-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Fontspring-DEMO-proximanova-light";
+  src: local("Fontspring-DEMO-proximanova-light"),
+    url(./fonts/Fontspring-DEMO-proximanova-light.otf) format("opentype");
+}
+@font-face {
+  font-family: "Minerva-Modern-Regular";
+  src: local("Minerva-Modern-Regular"),
+    url(./fonts/Minerva-Modern-Regular.otf) format("opentype");
+}
+
+#cursor {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background-color: #2f3137ff;
+  border-radius: 100%;
+  pointer-events: none;
+  z-index: 1000;
+  transition: transform ease-out 10ms;
+}
+
+#stalker {
+  position: fixed;
+  margin-top: -15px;
+  margin-left: -15px;
+  width: 40px;
+  height: 40px;
+  background-color: #2f313718;
+  border-radius: 100%;
+  pointer-events: none;
+  transition: transform ease-out 100ms;
+  z-index: 999;
+}
+.boxPattern {
+  /* background-color: #e5e5f7; */
+  opacity: 0.8;
+  background-image: linear-gradient(#c0c0c0 1px, transparent 1px),
+    linear-gradient(to right, #c0c0c0 1px, #ffffff00 1px);
+  background-size: 100px 100px;
+}
