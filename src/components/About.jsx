@@ -39,7 +39,7 @@ export default function QuoteCard() {
           I prioritize the creation of distinctive layouts, engaging
           interactions, and effective typography usage. I seamlessly blend these
           elements to produce a user experience that is not only captivating but
-          also leaves a lasting impression.
+          also leaves a lasting memory to the users.
           <br />
           Through my skilled and professional approach, I prioritize client
           satisfaction, and deliever the best I can.

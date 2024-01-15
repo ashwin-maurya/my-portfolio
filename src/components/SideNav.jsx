@@ -32,15 +32,15 @@ export default function SideNav() {
     <>
       <div className="fixed bottom-0 h-screen right-0 text-gray-600 ">
         <div>
-          <ul className="flex-1 flex pb-14 justify-between w-14 flex-col h-screen items-center mt-5  max-md:hidden">
+          <ul className="flex-1 flex pb-[10vh] justify-between w-[10vh] flex-col h-screen items-center mt-[4vh]  max-md:hiden max-md:mt-16">
             {navLinks.map((item) => (
               <li
                 key={item.label}
-                className={`relative px-2  transition-all duration-150 py-1 inline rotate-90 font-medium ${
+                className={`relative px-2  transition-all duration-150 py-[1vh] inline rotate-90 font-medium ${
                   activeLink === item.href.substr(1)
-                    ? "text-gray-900 text-xl"
-                    : "text-gray-300 text-lg "
-                } hover:text-gray-500 transition-colors font-PlayfairDisplay duration-200 cursor-pointer`}
+                    ? "text-gray-900 text-[1.6vw]"
+                    : "text-gray-300 text-[1.4vw] max-md:hidden "
+                } hover:text-gray-500 transition-colors font-Minerva font-semibold duration-200 cursor-pointer`}
               >
                 <a href={item.href}>{item.label}</a>
               </li>

@@ -50,13 +50,22 @@
   transition: transform ease-out 100ms;
   z-index: 999;
 }
+@keyframes moveGradient {
+  0% {
+    background-position: 0 50px;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
 .boxPattern {
-  /* background-color: #e5e5f7; */
-  opacity: 0.8;
   background-image: linear-gradient(#c0c0c0 1px, transparent 1px),
     linear-gradient(to right, #c0c0c0 1px, #ffffff00 1px);
   background-size: 100px 100px;
+  /* animation: moveGradient 5s linear infinite; */
 }
+
 .container {
   max-width: 1600px;
   margin: 0 auto;

@@ -59,7 +59,7 @@ function App() {
           </section>
           <section
             id="contact"
-            className="relative w-full h-full flex-shrink-0 snap-center overflow-hidden bg--0"
+            className="relative w-full h-full flex-shrink-0 snap-center overflow-hidden bg-stone-50"
           >
             <Contact />
           </section>
