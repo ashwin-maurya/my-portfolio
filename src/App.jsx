@@ -9,11 +9,12 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import SideNav from "./components/SideNav";
 import Reviews from "./components/Reviews";
+import NameBar from "./components/NameBar";
 function App() {
   return (
     <>
-      <div className="relative no-scrollbar">
-        <div className="h-screen w-screen  flex flex-col snap-y snap-mandatory overflow-hidden overflow-y-auto scroll-smooth no-scrollbar boxPattern transition-all duration-150">
+      <div className="relative no-scrollbar ">
+        <div className="h-screen w-100vw  flex flex-col snap-y snap-mandatory overflow-hidden overflow-y-auto scroll-smooth no-scrollbar boxPattern transition-all bg-[#f3f3f3] duration-150">
           <section
             id="home"
             className="relative w-screen h-full flex-shrink-0 snap-center overflow-hidden bg-stone-50  flex items-center"
@@ -22,25 +23,25 @@ function App() {
           </section>
           <section
             id="project"
-            className="relative  w-full h-full flex-shrink-0 snap-center overflow-hidden bg-stone-0"
+            className="relative  w-full h-full flex-shrink-0 snap-center overflow-hidden bg--0"
           >
             <Project1 />
           </section>
           <section
             id="project"
-            className="relative w-full h-full flex-shrink-0 snap-center overflow-hidden bg-stone-0"
+            className="relative w-full h-full flex-shrink-0 snap-center overflow-hidden bg--0"
           >
             <Project2 />
           </section>
           <section
             id="project"
-            className="relative w-full h-full flex-shrink-0 snap-center overflow-hidden bg-stone-0"
+            className="relative w-full h-full flex-shrink-0 snap-center overflow-hidden bg--0"
           >
             <Project3 />
           </section>
           <section
             id="project"
-            className="relative w-full h-full flex-shrink-0 snap-center overflow-hidden bg-stone-"
+            className="relative w-full h-full flex-shrink-0 snap-center overflow-hidden bg--"
           >
             <Project4 />
           </section>
@@ -52,18 +53,19 @@ function App() {
           </section>
           <section
             id="review"
-            className="relative w-full h-full flex-shrink-0 snap-center overflow-hidden bg-stone-0"
+            className="relative w-full h-full flex-shrink-0 snap-center overflow-hidden bg--0"
           >
             <Reviews />
           </section>
           <section
             id="contact"
-            className="relative w-full h-full flex-shrink-0 snap-center overflow-hidden bg-stone-0"
+            className="relative w-full h-full flex-shrink-0 snap-center overflow-hidden bg--0"
           >
             <Contact />
           </section>
         </div>
         <SocialIcons />
+        <NameBar />
         <SideNav />
       </div>
     </>

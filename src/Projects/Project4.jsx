@@ -81,12 +81,12 @@ export default function Project4() {
             <span className="backdrop-blur-sm">Visit</span>
           </span>
           <div
-            className="w-[500px] h-[400px] float-left cursor-pointer m-2 shadow-md bg-cover bg-center bg-white"
+            className="w-[500px] max-sm:w-[300px] h-[400px] float-left cursor-pointer m-2 shadow-md bg-cover bg-center bg-white"
             style={{
               backgroundImage: `url(https://images.unsplash.com/photo-1445966275305-9806327ea2b5?ixlib=rb-0.3.5&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&amp;s=14a02fab1200216368d682ecaa91e540)`,
             }}
           >
-            <span className="h-10 bg-gray-200 flex justify-start items-center rounded-tl-6 rounded-tr-6 z-100000">
+            <span className="h-10 bg-gray-800 flex justify-start items-center rounded-tl-6 rounded-tr-6 z-100000">
               <ul className="list-none p-0 flex pl-3">
                 <li className="h-4 w-4 rounded-full inline-block mr-3 box-border bg-red-500 border-2 border-red-700"></li>
                 <li className="h-4 w-4 rounded-full inline-block mr-3 box-border bg-yellow-500 border-2 border-yellow-700"></li>

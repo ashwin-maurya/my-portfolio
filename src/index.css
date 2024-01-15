@@ -57,3 +57,7 @@
     linear-gradient(to right, #c0c0c0 1px, #ffffff00 1px);
   background-size: 100px 100px;
 }
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
