@@ -3,12 +3,19 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
-  },
+ "scripts": {
+        "dev": "vite dev",
+        "build": "vite build",
+        "prod": "vite dev --host 0.0.0.0 --port 8080",
+        "test": "npm run test:integration && npm run test:unit",
+        "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+        "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+        "lint": "prettier --check . && eslint .",
+        "format": "prettier --write .",
+        "test:integration": "playwright test",
+        "test:unit": "vitest",
+        "postbuild": "node --experimental-json-modules ./generate-sitemap.js"
+    },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
