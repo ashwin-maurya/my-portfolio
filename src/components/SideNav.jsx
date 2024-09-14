@@ -30,13 +30,13 @@ export default function SideNav() {
 
   return (
     <>
-      <div className="fixed bottom-0 h-screen right-0 text-gray-600 ">
+      <div className="fixed hidden md:block bottom-0 h-screen right-0 text-gray-600 ">
         <div>
-          <ul className="flex-1 flex pb-[10vh] justify-between w-[10vh] flex-col h-screen items-center mt-[4vh]  max-md:hiden max-md:mt-16">
+          <ul className="flex-1 flex pb-[10vh] justify-between w-[8vh]  flex-col h-screen items-center pt-[20vh]  max-md:hiden">
             {navLinks.map((item) => (
               <li
                 key={item.label}
-                className={`relative px-2  transition-all duration-150 py-[1vh] inline rotate-90 font-medium ${
+                className={`relative px-2  transition-all duration-150 inline rotate-90 font-medium ${
                   activeLink === item.href.substr(1)
                     ? "text-gray-900 text-[1.6vw]"
                     : "text-gray-300 text-[1.4vw] max-md:hidden "

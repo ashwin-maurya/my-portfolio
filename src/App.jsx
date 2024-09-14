@@ -1,73 +1,77 @@
-import { useState } from "react";
-import MainHero from "./components/MainHero";
-import SocialIcons from "./components/SocialIcons";
-import Project1 from "./Projects/Project1";
-import Project2 from "./Projects/Project2";
-import Project3 from "./Projects/Project3";
-import Project4 from "./Projects/Project4";
-import About from "./components/About";
+import MainHero from "./sections/home/MainHero";
+import Project1 from "./sections/projects/Project1";
+import About from "./sections/about/About";
 import Contact from "./components/Contact";
 import SideNav from "./components/SideNav";
-import Reviews from "./components/Reviews";
+import Reviews from "./sections/reviews/Reviews";
 import NameBar from "./components/NameBar";
+import LocomotiveScroll from "locomotive-scroll";
+import { useEffect, useRef } from "react";
+import { Scrollbars } from "react-custom-scrollbars-2";
+
 function App() {
+  const scrollRef = useRef(null);
+
+  useEffect(() => {
+    const scroll = new LocomotiveScroll({
+      el: scrollRef.current,
+      smooth: true,
+      getDirection: true,
+    });
+
+    return () => {
+      if (scroll) scroll.destroy(); // Cleanup the scroll instance when the component unmounts
+    };
+  }, []);
+
   return (
     <>
-      <div className="relative no-scrollbar ">
-        <div className="h-screen w-100vw  flex flex-col snap-y snap-mandatory overflow-hidden overflow-y-auto scroll-smooth no-scrollbar boxPattern transition-all bg-[#f3f3f3] duration-150">
-          <section
-            id="home"
-            className="relative w-screen h-full flex-shrink-0 snap-center overflow-hidden bg-stone-50  flex items-center"
-          >
-            <MainHero />
-          </section>
-          <section
-            id="project"
-            className="relative  w-full h-full flex-shrink-0 snap-center overflow-hidden bg--0"
-          >
-            <Project1 />
-          </section>
-          <section
-            id="project"
-            className="relative w-full h-full flex-shrink-0 snap-center overflow-hidden bg--0"
-          >
-            <Project2 />
-          </section>
-          <section
-            id="project"
-            className="relative w-full h-full flex-shrink-0 snap-center overflow-hidden bg--0"
-          >
-            <Project3 />
-          </section>
-          <section
-            id="project"
-            className="relative w-full h-full flex-shrink-0 snap-center overflow-hidden bg--"
-          >
-            <Project4 />
-          </section>
-          <section
-            id="about"
-            className="relative w-full h-full flex-shrink-0 snap-center overflow-hidden bg-stone-50"
-          >
-            <About />
-          </section>
-          <section
-            id="review"
-            className="relative w-full h-full flex-shrink-0 snap-center overflow-hidden bg--0"
-          >
-            <Reviews />
-          </section>
-          <section
-            id="contact"
-            className="relative w-full h-full flex-shrink-0 snap-center overflow-hidden bg-stone-50"
-          >
-            <Contact />
-          </section>
+      <Scrollbars
+        autoHide
+        autoHideDuration={500}
+        autoHideTimeout={400}
+        style={{ width: "100vw", height: "100vh" }}
+      >
+        <div className="relative">
+          <div className="flex flex-col snap-y snap-mandatory bg-fixed overflow-y-auto scroll-smooth no-scrollbar boxPattern transition-all bg-[#f3f3f3] duration-150">
+            <div ref={scrollRef}>
+              <section
+                id="home"
+                className="relative w-screen h-[800px] md:h-screen  bg-stone-50  flex items-center"
+              >
+                <MainHero />
+              </section>
+              <section
+                id="project"
+                className="relative  w-screen h-full  bg--0"
+              >
+                <Project1 />
+              </section>
+
+              <section
+                id="about"
+                className="relative w-screen h-screen  bg-stone-50"
+              >
+                <About />
+              </section>
+              <section
+                id="review"
+                className="relative w-screen h-[600px] md:h-screen bg--0"
+              >
+                <Reviews />
+              </section>
+              <section
+                id="contact"
+                className="relative w-screen h-screen  bg-stone-50"
+              >
+                <Contact />
+              </section>
+            </div>
+          </div>
+          <NameBar />
+          <SideNav />
         </div>
-        <SocialIcons />
-        <NameBar />
-        <SideNav />
-      </div>
+      </Scrollbars>
     </>
   );
 }
