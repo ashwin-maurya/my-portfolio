@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 
-export default function ProjectWindow() {
+export default function ProjectWindow({ image }) {
   const moveWrapRef = useRef(null);
   const project1Ref = useRef(null);
 
@@ -76,12 +76,12 @@ export default function ProjectWindow() {
       >
         <span className="backdrop-blur-sm text-lg font-semibold">View</span>
       </span>
-      <div
-        className="w-[90vw] h-72 md:w-[35vw] md:h-[60vh] float-left cursor-pointer m-2 shadow-md bg-cover bg-center bg-white"
-        style={{
-          backgroundImage: `url(https://images.unsplash.com/photo-1445966275305-9806327ea2b5?ixlib=rb-0.3.5&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&amp;s=14a02fab1200216368d682ecaa91e540)`,
-        }}
-      >
+      <div className="w-[90vw] h-72 md:w-[35vw] md:h-[60vh] float-left cursor-pointer m-2 shadow-md bg-cover bg-center bg-white">
+        <img
+          src={image}
+          className="absolute object-top w-full w-contain top-0 left-0 right-0 "
+          alt=""
+        />
         <span className="h-10 relative bottom-1 bg-gray-200 flex justify-start items-center rounded-tl-6 rounded-tr-6 z-100000">
           <ul className="list-none p-0 flex pl-3">
             <li className="h-4 w-4 rounded-full inline-block mr-3 box-border bg-red-500 border-2 border-red-700"></li>

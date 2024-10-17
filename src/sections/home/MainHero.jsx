@@ -10,7 +10,7 @@ export default function MainHero() {
           </p>
           <section className="text-[2rem] md:text-[5.5vw] xl:text-[5.5vw] 2xl:text-[5.7vw] 3xl:text-[6vw] whitespace-nowrap  font-PlayfairDisplay font-semibold text-gray-700 overflow-hidden flex flex-col">
             {" "}
-            <p>WordPress Developer </p>
+            <p>WordPress </p>
             <p className="text-right w-full leading-tight">
               {" "}
               & a Web Developer

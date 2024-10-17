@@ -9,6 +9,7 @@ export default {
         PlayfairDisplay: ["PlayfairDisplay-VariableFont_wght", "sans-serif"],
         proximanova: ["Fontspring-DEMO-proximanova-light", "sans-serif"],
         Minerva: ["Minerva-Modern-Regular", "sans-serif"],
+        ppneuemontreal: ["ppneuemontreal-thin", "sans-serif"],
       },
       screens: {
         "3xl": "1940px", // Customize 2xl breakpoint

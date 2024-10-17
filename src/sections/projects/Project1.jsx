@@ -8,6 +8,7 @@ const projects = [
                   modi assumenda esse consectetur error nulla, vero alias. Lorem ipsum
                   dolor sit amet consectetur adipisicing elit.`,
     tags: "#content curation #art direction #copywriting #web design #interaction design #webflow development",
+    src: "/project_1.png",
   },
   {
     title: "Project Two",
@@ -15,13 +16,16 @@ const projects = [
                   quaerat suscipit voluptatum maiores corporis expedita assumenda esse
                   consectetur error nulla, vero alias.`,
     tags: "#UI/UX #branding #graphic design #digital marketing",
+    src: "/project_1.png",
   },
+
   {
     title: "Project Three",
     description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
                   voluptatum maiores corporis modi assumenda esse consectetur error nulla,
                   vero alias. Lorem ipsum dolor sit amet consectetur adipisicing elit.`,
     tags: "#mobile design #app development #user experience",
+    src: "/project_1.png",
   },
   {
     title: "Project Four",
@@ -29,6 +33,7 @@ const projects = [
                   laborum suscipit doloremque, expedita voluptatum maiores corporis
                   modi assumenda esse consectetur error nulla, vero alias.`,
     tags: "#branding #advertising #graphic design #logo design",
+    src: "/project_1.png",
   },
 ];
 
@@ -43,15 +48,15 @@ export default function ProjectList() {
             index % 2 === 0 ? "flex-row-reverse" : "flex-row md:gap-20"
           } background`}
         >
-          <ProjectWindow />
+          <ProjectWindow image={project.src} />
           <div className="md:max-w-[30vw] md:mr-28 w-[90vw] ">
-            <h1 className="pb-5 max-sm:pb-2 font-semibold text-4xl md:text-[3vw] relative font-PlayfairDisplay capitalize">
+            <h1 className="pb-5 max-sm:pb-2 font-semibold text-2xl md:text-[3vw] relative font-PlayfairDisplay capitalize">
               {project.title}
             </h1>
-            <p className="pb-5 text-xl md:text-[1.4vw] font-proximanova">
+            <p className="pb-5 text-lg md:text-[1.4vw] font-proximanova">
               {project.description}
             </p>
-            <span className="font-Minerva cursor-pointer font-bold text-xl md:text-[1vw]">
+            <span className="font-Minerva cursor-pointer font-bold text-lg md:text-[1vw]">
               {project.tags}
             </span>
           </div>

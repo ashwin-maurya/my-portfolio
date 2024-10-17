@@ -6,11 +6,18 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+*::-webkit-scrollbar {
+  display: none;
+}
 @font-face {
   font-family: "PlayfairDisplay-VariableFont_wght";
   src: local("PlayfairDisplay-VariableFont_wght"),
     url(./fonts/PlayfairDisplay-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+  font-family: "ppneuemontreal-thin";
+  src: local("ppneuemontreal-thin.woff"),
+    url(./fonts/ppneuemontreal-thin.woff) format("woff");
 }
 @font-face {
   font-family: "Fontspring-DEMO-proximanova-light";
